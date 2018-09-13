@@ -1,0 +1,43 @@
+{
+  "name": "trc_fullstack",
+  "version": "1.0.0",
+  "description": "fullstack app with angular 6, express, mongodb",
+  "main": "index.js",
+  "engines": {
+    "node": "10.5.0",
+    "npm": "6.1.0"
+  },
+  "scripts": {
+    "start": "node index",
+    "server": "nodemon index",
+    "client-install": "npm install --prefix client",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix client"
+  },
+  "keywords": [
+    "express",
+    "angular6"
+  ],
+  "author": "Tanya",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.6",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "nodemon": "^1.18.3"
+  }
+}
